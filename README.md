@@ -72,6 +72,7 @@ This would have eliminated the need to maintain four seperate portTries in the a
 
 
 ### Concurrency
+(To the current datastructure, not the above mentioned Trie implementation).  
 * To make insertions faster, I could have used one thread per Hashtable (4 Hashtables).  
 In worst case, it doesn't change the run-time.  
 In best case, it would cut the insertion run-time by 4.  
