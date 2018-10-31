@@ -82,11 +82,11 @@ In best case, it would cut the insertion run-time by 4.
 * For each hashtable, I could have multiple worker threads.  
 I could concurrently add IP's belonging to distinct port by making a thread acquire lock for the corresponding port's Trie,
 and then inserting the new IP (Similar to what I did in MapReduce infrastructure).  
-In worst case, the run-time increases due to scheduler interrupts. 
+In worst case, the run-time increases due to scheduler interrupts.  
 In best case, it would **SIGNIFICANTLY** cut down the run-time.
 
 # Team
-I find both Platform and Policy team interesting and would be equally interested in either. However, if I have to rank:  
+I find both the Platform and Policy team equally interesting and would like to be considered for both. However, if I have to rank:  
 1) Platform team.  
 2) Policy team.  
 
