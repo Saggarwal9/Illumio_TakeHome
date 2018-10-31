@@ -62,7 +62,7 @@ but for an IP it is always 4.
 So my datastructure would have been ArrayList of PortTries where each lastNode would have contained the object to IPTrie.  
 This would have reduced space complexity for Ports from (4\*65536) to (4\*9^5).
 
-### Trie for Protocol + Hash.
+### Trie for Protocol + Direction.
 To further optimize the data structure, I could have just created seperate Trie nodes for Protocol and Hash.  
 After you've reached the end of port trie, the program would then check the ProtocolTrie object within the PortTrie.    
 The protocol trie would be of size 2 where the 0th index would indicate TCP and 1st index would indicate UDP.  
