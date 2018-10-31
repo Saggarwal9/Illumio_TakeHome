@@ -7,6 +7,8 @@ Thank you, Illumio for giving me the opportunity to interview and tackle an inte
 6:25 - 7:20 PM : Implementing the code in Java using Eclipse IDE.  
 7:20 - 7:30 PM : Testing.  
 
+(and extra 10 minutes to write this Readme.)
+
 # Some important design decisions that I would like to mention: 
 
 ### Firewall Class:
