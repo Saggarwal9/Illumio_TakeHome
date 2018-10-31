@@ -55,6 +55,22 @@ Some integration testing to test each Trie and Rule class would help ensure cons
 ### Database
 Connection to a MySQL/SQLite database through JDBC would ensure persistent storage, and prevent running out of Heap space.  
 
+### Trie for ports
+After finishing my implementation, I realized I could have also used Trie to represent ports.  
+It would've required a seperate Trie class, as for a port, the trie's height would vary (1-5)  
+but for an IP it is always 4.  
+So my datastructure would have been ArrayList of PortTries where each lastNode would have contained the object to IPTrie.  
+This would have reduced space complexity for Ports from (4\*65536) to (4\*9^5).
+
+### Trie for Protocol + Hash.
+To further optimize the data structure, I could have just created seperate Trie nodes for Protocol and Hash.  
+After you've reached the end of port trie, the program would then check the ProtocolTrie object within the PortTrie.    
+The protocol trie would be of size 2 where the 0th index would indicate TCP and 1st index would indicate UDP.  
+The protocol trie would also contain an object to the direction Trie.  
+The direction trie would be of size 2 where the 0th index would indicate outbound and inbound index would indicate UDP.  
+This would have eliminated the need to maintain four seperate portTries in the above mentioned optimization.  
+
+
 ### Concurrency
 * To make insertions faster, I could have used one thread per Hashtable (4 Hashtables).  
 In worst case, it doesn't change the run-time.  
@@ -71,7 +87,7 @@ I find both Platform and Policy team interesting and would be equally interested
 1) Platform team.  
 2) Policy team.  
 
-Thank you for reading through this,
+Thank you for taking the time to read through this,
 
 Shubham Aggarwal
 
